@@ -552,7 +552,7 @@ const Home = () => {
         <MobileAppSectionTitle>
           Easy to Access with
           <MobileAppSectionTitleHighlight>
-            Mobile App
+          &nbsp;Mobile App
           </MobileAppSectionTitleHighlight>
         </MobileAppSectionTitle>
         <MobileAppSectionText>
