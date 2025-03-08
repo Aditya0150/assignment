@@ -52,6 +52,7 @@ export const ContactThroughButton = styled.button`
   align-items: center;
 `;
 
+
 export const TopSection = styled.div`
   padding-bottom: 30px;
   background-color: #ff5202;
@@ -88,10 +89,18 @@ export const NavbarLinksContainer = styled.ul`
   align-items: center;
 `;
 
-export const NavbarLinkItem = styled.li``;
+export const NavbarLinkItem = styled.li`
 
-export const NavbarLink = styled`
+`;
+
+export const NavbarLink = styled.a`
   color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #ffcc00;
+  }
 `;
 
 export const NavbarLinksDropDown = styled.select`
@@ -219,16 +228,29 @@ export const LoginSectionImage = styled.img`
 export const LoginSectionButtonContainer = styled.div`
   display: flex;
 `;
+
 export const TypeOfLoginButton = styled.button`
-  color: ${(props) => (props.isActive ? "#789c05" : "#9a9a9a")};
+  color: ${(props) => (props.$isActive ? "#a4c639" : "#9a9a9a")};
   border: none;
   outline: none;
   background: none;
   flex-grow: 1;
   font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
   border-bottom: ${(props) =>
-    props.isActive ? "1px solid #ff5202" : "1px solid gray"};
+    props.$isActive ? "3px solid #ff5202" : "3px solid transparent"};
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+
+  &:hover {
+    color: #a4c639;
+  }
+
+  &:active {
+    color: #789c05; /* Color when clicked */
+  }
 `;
+
 
 export const LoginFormSection = styled.form`
   margin-top: 15px;

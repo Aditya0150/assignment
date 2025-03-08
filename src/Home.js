@@ -133,6 +133,7 @@ import {
   ContactUsThroughIconContainer,
   ContactUsThroughText,
 } from "./styledComponents";
+import { useState } from "react";
 
 const benefitsList = [
   {
@@ -211,8 +212,6 @@ const weAreAboutUs = [
 ];
 
 const Home = () => {
-  
-
   const topContactUsSection = () => (
     <ContactUsTopSection>
       <ContactThroughSection marginleft="true">
@@ -236,7 +235,7 @@ const Home = () => {
       <ContactThroughSection>
         <ContactThroughButton bgColor="#1bd741">
           <BsWhatsapp />
-          Whats App
+          WhatsApp
         </ContactThroughButton>
 
         <ContactThroughButton bgColor="#a4c639">
@@ -244,14 +243,11 @@ const Home = () => {
           Mobile App
         </ContactThroughButton>
 
-        
-          <ContactThroughButton bgColor="#0d1028">Login</ContactThroughButton>
-        
-        
-          <ContactThroughButton bgColor="#0d1028">
-            Registration
-          </ContactThroughButton>
-        
+        <ContactThroughButton bgColor="#0d1028">Login</ContactThroughButton>
+
+        <ContactThroughButton bgColor="#0d1028">
+          Registration
+        </ContactThroughButton>
       </ContactThroughSection>
     </ContactUsTopSection>
   );
@@ -266,7 +262,7 @@ const Home = () => {
       </NavbarIconBg>
       <NavbarLinksContainer>
         <NavbarLinkItem>
-          <NavbarLink >Home</NavbarLink>
+          <NavbarLink>Home</NavbarLink>
         </NavbarLinkItem>
         <NavbarLinkItem>
           <NavbarLinksDropDown>
@@ -299,10 +295,10 @@ const Home = () => {
           </NavbarLinksDropDown>
         </NavbarLinkItem>
         <NavbarLinkItem>
-          <NavbarLink >Blogs</NavbarLink>
+          <NavbarLink>Blogs</NavbarLink>
         </NavbarLinkItem>
         <NavbarLinkItem>
-          <NavbarLink >Contact Us</NavbarLink>
+          <NavbarLink>Contact Us</NavbarLink>
         </NavbarLinkItem>
         <NavbarLinkItem>
           <ContactThroughButton bgColor="#0d1028">
@@ -317,6 +313,8 @@ const Home = () => {
   const onFormSubmit = (event) => {
     event.preventDefault();
   };
+
+  const [loginType, setLoginType] = useState("student");
 
   const topContentSection = () => (
     <TopContentSection>
@@ -400,29 +398,75 @@ const Home = () => {
           src="https://schoolaura.com/Content/new_assets/images/header/user-img.png"
           alt="login image"
         />
+
         <LoginSectionButtonContainer>
-          <TypeOfLoginButton>Student Login</TypeOfLoginButton>
-          <TypeOfLoginButton>Parents Login</TypeOfLoginButton>
+          <TypeOfLoginButton
+            $isActive={loginType === "student"}
+            onClick={() => setLoginType("student")}
+          >
+            Student Login
+          </TypeOfLoginButton>
+          <TypeOfLoginButton
+            $isActive={loginType === "parent"}
+            onClick={() => setLoginType("parent")}
+          >
+            Parents Login
+          </TypeOfLoginButton>
         </LoginSectionButtonContainer>
-        <LoginFormSection onSubmit={onFormSubmit}>
-          <InputContainer>
-            <InputLabel htmlFor="mobileNumber">Mobile Number or Key</InputLabel>
-            <InputBox type="text" id="mobileNumber" />
-          </InputContainer>
-          <InputContainer>
-            <InputLabel htmlFor="password">Student Password</InputLabel>
-            <InputBox type="password" id="password" />
-          </InputContainer>
-          <LoginButton type="submit">Login</LoginButton>
-        </LoginFormSection>
-        <ForgotContainer>
-          <LoginFormInteractionButton type="button">
-            Forgot Password
-          </LoginFormInteractionButton>
-          <LoginFormInteractionButton type="button">
-            Create Account
-          </LoginFormInteractionButton>
-        </ForgotContainer>
+
+        {loginType === "student" && (
+          <>
+            <LoginFormSection onSubmit={onFormSubmit}>
+              <InputContainer>
+                <InputLabel htmlFor="mobileNumber">
+                  Mobile Number or Key
+                </InputLabel>
+                <InputBox type="text" id="mobileNumber" />
+              </InputContainer>
+              <InputContainer>
+                <InputLabel htmlFor="password">Student Password</InputLabel>
+                <InputBox type="password" id="password" />
+              </InputContainer>
+              <LoginButton type="submit">Login</LoginButton>
+            </LoginFormSection>
+
+            <ForgotContainer>
+              <LoginFormInteractionButton type="button">
+                Forgot Password
+              </LoginFormInteractionButton>
+              <LoginFormInteractionButton type="button">
+                Create Account
+              </LoginFormInteractionButton>
+            </ForgotContainer>
+          </>
+        )}
+        {loginType === "parent" && (
+          <>
+            <LoginFormSection onSubmit={onFormSubmit}>
+              <InputContainer>
+                <InputLabel htmlFor="mobileNumber">
+                  Parent Mobile or Email
+                </InputLabel>
+                <InputBox type="text" id="mobileNumber" />
+              </InputContainer>
+              <InputContainer>
+                <InputLabel htmlFor="password">Parent Password</InputLabel>
+                <InputBox type="password" id="password" />
+              </InputContainer>
+              <LoginButton type="submit">Login</LoginButton>
+            </LoginFormSection>
+
+            <ForgotContainer>
+              <LoginFormInteractionButton type="button">
+                Forgot Password
+              </LoginFormInteractionButton>
+              <LoginFormInteractionButton type="button">
+                Create Account
+              </LoginFormInteractionButton>
+            </ForgotContainer>
+          </>
+        )}
+
       </TopContentLoginSection>
     </TopContentSection>
   );
