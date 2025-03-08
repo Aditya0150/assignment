@@ -53,15 +53,26 @@ export const ContactThroughButton = styled.button`
 `;
 
 
+
 export const TopSection = styled.div`
-  padding-bottom: 30px;
+  margin-bottom: 0px;
+  padding-bottom-0px;
+  border-bottom: 0px;
+  width: 100%;
   background-color: #ff5202;
   background-image: url("https://schoolaura.com/Content/new_assets/images/header/banner-bg.png");
   background-size: contain;
   display: flex;
   flex-direction: column;
   background-position: bottom;
+  position: relative; /* Ensure SVG stays at the bottom */
+
+
 `;
+
+
+
+
 
 export const NavbarSection = styled.header`
   display: flex;
