@@ -315,8 +315,8 @@ export const LoginFormInteractionButton = styled.button`
   font-size: 16px;
 `;
 export const WhyOnlineStudySection = styled.div`
-  width: 60%;
-  margin-top: 35px;
+  width: 74%;
+  margin-top: 55px;
   align-self: center;
 `;
 
@@ -326,7 +326,7 @@ export const WhyOnlineStudyContentSection = styled.div`
 export const WhyOnlineStudyCoursesContainer = styled.div`
   background-image: url("https://schoolaura.com/Content/new_assets/images/banner-2/Clip.png");
   background-color: #0d1028;
-  width: 30%;
+  width: 40%;
   flex-shrink: 0;
   height: 350px;
   background-repeat: no-repeat;
@@ -335,11 +335,12 @@ export const WhyOnlineStudyCoursesContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const WhyOnlineStudyCoursesList = styled.ul``;
+export const WhyOnlineStudyCoursesList = styled.ul`
+`;
 
 export const WhyOnlineStudyCourseItem = styled.li`
-  font-size: 26px;
-  margin-bottom: 5px;
+  font-size: 40px;
+  margin-bottom: 25px;
   color: #fff;
 `;
 
@@ -349,12 +350,12 @@ export const WhyOnlineStudyInfo = styled.div`
 `;
 
 export const WhyOnlineStudyInfoTitle = styled.h1`
-  font-size: 36px;
+  font-size: 40px;
   color: #0d1028;
 `;
 export const WhyOnlineStudyInfoText = styled.p`
   color: #212529;
-  font-size: 16px;
+  font-size: 20px;
 `;
 
 export const WhyOnlineStudyInfoTextStrong = styled.strong`
@@ -363,7 +364,7 @@ export const WhyOnlineStudyInfoTextStrong = styled.strong`
 
 export const WhyOnlineStudyImage = styled.img`
   width: 100%;
-  margin-top: -50px;
+  margin-top: -70px;
 `;
 
 export const BenefitsSection = styled.div`
@@ -418,24 +419,24 @@ export const MobileAppSection = styled.div`
   background-color: lightgrey;
 `;
 export const MobileAppSectionImage = styled.img`
-  width: 320px;
-  height: 320px;
+  width:700px;
+  height: 450px;
 `;
 export const MobileAppSectionInfo = styled.div`
-  padding: 25px;
+  padding: 20px;
 `;
 
 export const MobileAppSectionTitle = styled.h1`
-  font-size: 28px;
+  font-size: 45px;
   color: #0d1028;
 `;
 
 export const MobileAppSectionTitleHighlight = styled.span`
   color: #ff5202;
-  font-size: 28px;
+  font-size: 45px;
 `;
 export const MobileAppSectionText = styled.p`
-  font-size: 16px;
+  font-size: 23px;
   color: #212529;
 `;
 export const MobileAppSectionButton = styled.button`
@@ -466,21 +467,22 @@ export const OnlineBenefitsInfo = styled.div``;
 
 export const OnlineBenefitsTitle = styled.h1`
   color: #0d1028;
-  font-size: 34px;
+  font-size: 44px;
 `;
 export const OnlineBenefitsTitleHighlight = styled.span`
   color: #ff5202;
-  font-size: 34px;
+  font-size: 44px;
 `;
 export const OnlineBenefitsHrLine = styled.hr`
   width: 100px;
 `;
 export const OnlineBenefitsText = styled.p`
-  font-size: 16px;
+  font-size: 20px;
   color: #212529;
 `;
 export const OnlineBenefitsList = styled.ul`
-  padding: 20px;
+  padding: 24px;
+  font-size: 20px;
 `;
 
 export const OnlineBenefitsListItem = styled.li`
@@ -488,7 +490,7 @@ export const OnlineBenefitsListItem = styled.li`
 `;
 
 export const OnlineBenefitsImage = styled.img`
-  height: 350px;
+  height: 450px;
   margin-left: 40px;
 `;
 export const OnlineBenefitsBanner = styled.div`
@@ -496,7 +498,7 @@ export const OnlineBenefitsBanner = styled.div`
   background-size: cover;
   background-position: center;
   background-color: #0d1028;
-  height: 10vh;
+  height: 20vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -524,22 +526,22 @@ export const WeAreAboutImgContainer = styled.div`
 `;
 
 export const WeAreAboutImage = styled.img`
-  height: 300px;
+  height: 600px;
 `;
 
 export const WeAreAboutInfo = styled.div`
-  width: 60%;
-  margin-left: 150px;
+  width: 70%;
+  margin-left: 90px;
 `;
 
 export const WeAreAboutTitle = styled.h1`
   color: #0d1028;
-  font-size: 36px;
+  font-size: 56px;
 `;
 
 export const WeAreAboutTitleHighlight = styled.span`
   color: #ff5202;
-  font-size: 36px;
+  font-size: 50px;
 `;
 
 export const WeAreAboutHrLine = styled.hr`
@@ -558,11 +560,11 @@ export const WeAreAboutList = styled.ul`
 
 export const WeAreAboutListItem = styled.li`
   display: flex;
-  width: 250px;
+  width: 450px;
 `;
 
 export const WeAreAboutListItemImg = styled.img`
-  height: 60px;
+  height: 100px;
   margin-right: 10px;
 `;
 
